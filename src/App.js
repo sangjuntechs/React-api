@@ -1,9 +1,17 @@
-import React from 'react';
-import Users from './Users'
+import React from "react";
+import Users from "./Users";
+import Users2 from "./Users2";
 
 function App() {
   return (
-    <Users></Users>
+    <div>
+      <div>
+        <Users />
+      </div>
+      <div>
+        <Users2 />
+      </div>
+    </div>
   );
 }
 
