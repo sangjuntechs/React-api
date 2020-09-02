@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useLayoutEffect } from "react";
+import React, { useState, useEffect, } from "react";
 import axios from "axios";
 
 function Users() {
@@ -17,21 +17,29 @@ function Users() {
         );
         setUsers(response.data);
       } catch (e) {
-          setError(e);
+        setError(e);
       }
       setLoading(false);
     };
     fetchUsers();
   }, []);
 
-  if (loading) return <div>Loading..</div>
-  if (error) return <div>Error catch</div>
+  if (loading) return <div>Loading..</div>;
+  if (error) return <div>Error catch</div>;
   if (!users) return null;
-  return <ul>
-      {users.map(user => <li key={user.id}>
-          {user.username}({user.name})
-      </li>)}
-  </ul>
+  return (
+    <>
+    <h1>fetch Users</h1>
+    <ul>
+      {users.map((user) => (
+        <li key={user.id}>
+          <h4>{user.username}({user.name})</h4>
+          e-mail: {user.email}
+        </li>
+      ))}
+    </ul>
+    </>
+  );
 }
 
 export default Users;
