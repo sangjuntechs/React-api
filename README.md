@@ -4,6 +4,6 @@
 
 API는 JSONplaceholder에서 가져옵니다.
 
-
+## 🎊습득할 것
 react-async를 통한 요청상태관리
 reacthooks
